@@ -27,3 +27,7 @@ body {
   font-family: 'Raleway', sans-serif;
 color: #000;		
 }
+
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
