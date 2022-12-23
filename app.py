@@ -2,6 +2,10 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
+# Page Settings
+favicon = "images/favicon.ico"
+st.set_page_config(page_title="Merry Christmas", page_icon=favicon)
+
 
 # Load Data in Dataframe
 @st.cache
@@ -9,7 +13,7 @@ def load_data():
     return pd.read_csv("data/Japan-1950.csv")
 
 
-df = load_data
+df = load_data()
 y = df["Age"]
 x1 = df["M"]
 x2 = df["F"] * -1
@@ -137,10 +141,6 @@ fig.update_layout(
     bargap=0.0,  # gap between bars of adjacent location coordinates.
     bargroupgap=0,  # gap between bars of the same location coordinate.
 )
-
-# Page Settings
-favicon = "images/favicon.ico"
-st.set_page_config(page_title="Merry Christmas", page_icon=favicon)
 
 
 # Use Local CSS
